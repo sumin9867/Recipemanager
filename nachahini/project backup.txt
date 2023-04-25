@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg  my-0 py-2 z-3">
+            <div class="container-fluid ">
+                     <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success rounded-pill" type="submit">Search</button>
+                </form>
+              
+                <a class="navbar-brand z-3 position-absolute top-0 start-50" href="index.html">
+                    <img src="logo.png" class=" border z-3 rounded-circle logo text-center"></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navigation-bar float-left" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 p-1 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="planner.html">Planner</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="My Recipe.html">My Recipes</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">Use Up Leftover</a>
+                        </li>
+
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">Videos</a>
+                        </li>
+                        <li class="nav-item px-1 pe-4">
+                            <button class="open-button" onclick="openForm()"><i
+                                    class="bi bi-person-circle"></i></button>
+
+
+                            <div class="form-popup" id="myForm">
+                                <form action="/action_page.php" class="form-container">
+                                    <div class="login-wrap">
+                                        <div class="login-html rounded-5 ">
+                                            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label
+                                                for="tab-1" class="tab">Sign In</label>
+                                            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2"
+                                                class="tab">Sign
+                                                Up</label>
+
+                                            <div class="login-form">
+
+                                                <div class="sign-in-htm">
+                                                    <div class="group">
+                                                        <label for="user" class="label">Username</label>
+                                                        <input id="user" type="text" class="input">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Password</label>
+                                                        <input id="pass" type="password" class="input"
+                                                            data-type="password">
+                                                    </div>
+                                                    <div class="group">
+                                                        <input id="check" type="checkbox" class="check" checked>
+                                                        <label for="check"><span class="icon"></span> Keep me Signed
+                                                            in</label>
+                                                    </div>
+                                                    <div class="group">
+                                                        <input type="submit" class="button" value="Sign In">
+                                                    </div>
+                                                    <div class="hr"></div>
+                                                    <div class="foot-lnk">
+                                                        <a href="#forgot">Forgot Password?</a>
+                                                    </div>
+                                                </div>
+                                                <div class="sign-up-htm">
+                                                    <div class="group">
+                                                        <label for="user" class="label">Username</label>
+                                                        <input id="user" type="text" class="input">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Password</label>
+                                                        <input id="pass" type="password" class="input"
+                                                            data-type="password">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Repeat Password</label>
+                                                        <input id="pass" type="password" class="input"
+                                                            data-type="password">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Email Address</label>
+                                                        <input id="pass" type="text" class="input">
+                                                    </div>
+                                                    <div class="group">
+                                                        <input type="submit" class="button" value="Sign Up">
+                                                    </div>
+                                                    <div class="hr"></div>
+                                                    <div class="foot-lnk">
+                                                        <label for="tab-1">Already Member?</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <button type="button" class="btn cancel" onclick="closeForm()"><i
+                                            class="bi bi-x-circle z-5"></i></i></button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container z-1 position-absolute py-3 rounded-circle  translate-middles  home-design bg-white">
+
+    </div>
+    <div class="header border-top border-danger border-5 z-0">
+        <div class="ms-5 p-2">
+            <h1 class="fw-10 pb-3 fw-bolder shadow text-danger">Let's cook</h1>
+            <div class="input-group">
+                <div class="form-outline w-90 h-50 border-2 border-black">
+                    <input type="search" id="form1" class="form-control py-2  w-90 h-50 border-2"
+                        placeholder="search" />
+                </div>
+                <!-- <button type="button" class="btn btn-primary">
+                    <i class="fas fa-search"></i>
+                </button> -->
+            </div>
+            <div class="">
+                <p class="text-danger"> Calm And Keep Cooking</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 ">
+        <div class="row">
+            <div class="col-6">
+                <img src="second.png" class="rounded w-100 h-75">
+
+
+            </div>
+            <div class="col-6 ">
+                <div class="container my-3  rounded">
+                    <h1 class="fs-2">What to Make This week?</h1>
+                    <div class="text-danger fs-6 fw-bold">Keep an eye out for new videos from the BigOven Kitchen every
+                        week</div>
+                    <div class="pt-3 fw-bold ">Spaghetti</div>
+                    <div class="">Spaghetti (Italian: [spaˈɡetti]) is a long, thin, solid, cylindrical pasta. It is a
+                        staple food of traditional Italian cuisine. Like other pasta, spaghetti is made of milled wheat,
+                        water, and sometimes enriched with vitamins and minerals. Italian spaghetti is typically made
+                        from durum-wheat semolina</div>
+                    <button type="button" class="btn btn-danger mt-5 ms-4">Jump Into Recipe</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid my-3 mx-0 px-0">
+        <img src="ad.gif" class="w-100 h-50">
+    </div>
+
+    <div class="container pt-5 ">
+        <h1 class=" hr-lines">Recommended for you</h1>
+        <div class="row pt-5">
+            <div class="col-3 ">
+                <div class="card">
+                    <img src="second.png" class="card-img-top" alt="motor3.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">fkbn</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 ">
+                <div class="card">
+                    <img src="second.png" class="card-img-top" alt="motor3.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">fkbn</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 ">
+                <div class="card">
+                    <img src="second.png" class="card-img-top" alt="motor3.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">fkbn</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 ">
+                <div class="card">
+                    <img src="second.png" class="card-img-top" alt="motor3.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">kkkkk</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="">
+            <h1 class="hr-lines">Our newest added recipes</h1>
+        </div>
+        <div class="row mt-5">
+            <div class="col-3">
+                <div class="card border-0  h-107">
+                    <img src="second.png" class="card-img-top rounded-circle w-auto h-107 " alt="second.png.">
+                    <div class="card-body">
+                        <p class="card-text">fkbn</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-3">
+                <div class="card border-0  h-107">
+                    <img src="second.png" class="card-img-top rounded-circle w-auto h-107 " alt="second.png.">
+                    <div class="card-body">
+                        <p class="card-text">fkbn</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-3">
+                <div class="card border-0  h-107">
+                    <img src="second.png" class="card-img-top rounded-circle w-auto h-107 " alt="second.png.">
+                    <div class="card-body">
+                        <p class="card-text">fkbn</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-3 rounded">
+                <div class="card border-0  h-107">
+                    <img src="second.png" class="card-img-top rounded-circle w-auto h-107  overflow-hidden "
+                        alt="second.png.">
+                    <div class="card-body">
+                        <p class="card-text">fkbn</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid my-5 ">
+        <img src="ad2.gif" class="w-100 border rounded">
+    </div>
+    <div class="container">
+        <img src="burger.jpg" class="w-75 h-100 my-4 z-1 position-relative  rounded-3">
+        <div class=" z-3 position-absolute attached d-flex justify-content-end burger-image rounded-3">
+            <div class="card p-3" style="width: 23rem;">
+                <div class="card-body ">
+                    <h3 class="card-title py-2 text-center">Todays Special</h3>
+
+                    <p class="card-text">If you're craving a juicy, delicious burger, then you're in luck! Our
+                        restaurant is currently offering a mouthwatering burger that is sure to satisfy your hunger.
+                        Made with 100% fresh beef and cooked to perfection, our burgers are served on a toasted bun and
+                        topped with all your favorite fixings. Whether you like it classic with lettuce, tomato, and
+                        pickles, or you prefer something a little more adventurous like bacon and avocado, we've got you
+                        covered. So come on in and take advantage of this amazing offer today – your taste buds will
+                        thank you!
+                    </p>
+                    <!-- <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="">Quick List</div>
+                <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action">The current button</button>
+                    <button type="button" class="list-group-item list-group-item-action">A second button item</button>
+                    <button type="button" class="list-group-item list-group-item-action">A third button item</button>
+                    <button type="button" class="list-group-item list-group-item-action">A fourth button item</button>
+                    <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button
+                        item</button>
+                </div>
+            </div>
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+        
+
+
+
+    </script>
+
+</body>
+
+</html>

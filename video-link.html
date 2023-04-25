@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Video Playlist Tutorial</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet1.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- ===== Fontawesome CDN Link ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+      * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+
+       
+
+        .container {
+            max-width: 1200px;
+            margin: 17px auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .container .main-video-container {
+            flex: 1 1 700px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            background-color: #fff;
+            padding: 15px;
+        }
+
+        .container .main-video-container .main-video {
+            margin-bottom: 7px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .container .main-video-container .main-vid-title {
+            font-size: 20px;
+            color: #444;
+        }
+
+        .container .video-list-container {
+            flex: 1 1 350px;
+            height: 485px;
+            overflow-y: scroll;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            background-color: #fff;
+            padding: 15px;
+        }
+
+        .container .video-list-container::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .container .video-list-container::-webkit-scrollbar-track {
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .container .video-list-container::-webkit-scrollbar-thumb {
+            background-color: #444;
+            border-radius: 5px;
+        }
+
+        .container .video-list-container .list {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            background-color: #eee;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .container .video-list-container .list:last-child {
+            margin-bottom: 0;
+        }
+
+        .container .video-list-container .list.active {
+            background-color: #444;
+        }
+
+        .container .video-list-container .list.active .list-title {
+            color: #fff;
+        }
+
+        .container .video-list-container .list .list-video {
+            width: 100px;
+            border-radius: 5px;
+        }
+
+        .container .video-list-container .list .list-title {
+            font-size: 17px;
+            color: #444;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media (max-width:1200px) {
+
+            .container {
+                margin: 0;
+            }
+
+        }
+
+        @media (max-width:450px) {
+
+            .container .main-video-container .main-vid-title {
+                font-size: 15px;
+                text-align: center;
+            }
+
+            .container .video-list-container .list {
+                flex-flow: column;
+                gap: 10px;
+            }
+
+            .container .video-list-container .list .list-video {
+                width: 100%;
+            }
+
+            .container .video-list-container .list .list-title {
+                font-size: 15px;
+                text-align: center;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid px-0 py-0 ">
+
+        <nav class="navbar navbar-expand-lg  my-0 py-0 z-3 bg-pink">
+    
+            <div class="container-fluid px-0 ps-1 ">
+              <a class="navbar-brand d-flex ms-4 " href="index.html">
+                <img src="image/logo.png" class="  logo text-center"></a>
+                <div class="header1">
+                  <div class="header__search">
+                    <form action="">
+                      <input type="text" placeholder="Search" />
+                      <button><i class="material-icons text-center">search</i></button>
+                    </form>
+                  </div>
+                  </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navigation-bar float-left" id="navbarSupportedContent">
+                    <ul class="navbar-nav py-0  mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="planner.html"><i
+                                    class="fal fa-brands fa-tiktok"></i></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="My Recipe.html"><i class="fal fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"><i class="fal fa-brands fa-youtube"></i></a>
+                        </li>
+    
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"><i class="fal fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li class="nav-item  ">
+                            <button class="open-button bg-transparent border-0 pt-0" onclick="openForm()"><small>SIGN
+                                    IN</small>
+                            </button>
+                            <div class="form-popup " id="myForm">
+                                <form action="/action_page.php" class="form-container">
+                                    <div class="login-wrap opacity-100 rounded-5">
+                                        <div class="login-html rounded-5 ">
+                                            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label
+                                                for="tab-1" class="tab">Sign In</label>
+                                            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2"
+                                                class="tab">Sign
+                                                Up</label>
+    
+                                            <div class="login-form">
+    
+                                                <div class="sign-in-htm">
+                                                    <div class="group">
+                                                        <label for="user" class="label">Username</label>
+                                                        <input id="user" type="text" class="input">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Password</label>
+                                                        <input id="pass" type="password" class="input"
+                                                            data-type="password">
+                                                    </div>
+                                                    <div class="group">
+                                                        <input id="check" type="checkbox" class="check" checked>
+                                                        <label for="check"><span class="icon"></span> Keep me Signed
+                                                            in</label>
+                                                    </div>
+                                                    <div class="group">
+                                                        <input type="submit" class="button" value="Sign In">
+                                                    </div>
+                                                    <div class="hr"></div>
+                                                    <div class="foot-lnk text-white">
+                                                        <a href="#forgot" class="text-white
+                                                        ">Forgot Password?</a>
+                                                    </div>
+                                                </div>
+                                                <div class="sign-up-htm">
+                                                    <div class="group">
+                                                        <label for="user" class="label">Username</label>
+                                                        <input id="user" type="text" class="input">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Password</label>
+                                                        <input id="pass" type="password" class="input"
+                                                            data-type="password">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Repeat Password</label>
+                                                        <input id="pass" type="password" class="input"
+                                                            data-type="password">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Email Address</label>
+                                                        <input id="pass" type="text" class="input">
+                                                    </div>
+                                                    <div class="group">
+                                                        <input type="submit" class="button" value="Sign Up">
+                                                    </div>
+                                                    <div class="hr"></div>
+                                                    <div class="foot-lnk">
+                                                        <label for="tab-1">Already Member?</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn cancel" onclick="closeForm()"><i
+                                            class="fa-solid fa-xmark"></i></button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+
+        <div class="main-video-container">
+            <iframe width="760" height="415" src="https://www.youtube.com/embed/aleED1mc5kI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+   
+        </div>
+
+        <div class="video-list-container">
+
+            <div class="list active">
+                <iframe  src="https://www.youtube.com/embed/oKnKgzLgwR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3 class="list-title">house flood animjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjation</h3>
+            </div>
+
+            <div class="list">
+                <img src="image/mutton-biryani.jpg" class="list-video" style="width: 100px; height:60px;">
+                <h3 class="list-title">Mutton Biryani</h3>
+            </div>
+
+            <div class="list">
+                <img src="image/buff-biryani.jpg" class="list-video">
+                <h3 class="list-title">Best Buff Biryani in town</h3>
+            </div>
+
+            <div class="list">
+                <video src="video/vid-4.mp4" class="list-video"></video>
+                <h3 class="list-title">3D town animation</h3>
+            </div>
+
+            <div class="list">
+                <video src="video/vid-5.mp4" class="list-video"></video>
+                <h3 class="list-title">man chasing carrot animation</h3>
+            </div>
+
+            <div class="list">
+                <video src="video/vid-6.mp4" class="list-video"></video>
+                <h3 class="list-title">door hinge animation</h3>
+            </div>
+
+            <div class="list">
+                <video src="video/vid-7.mp4" class="list-video"></video>
+                <h3 class="list-title">poeple walking in town animation</h3>
+            </div>
+
+            <div class="list">
+                <video src="video/vid-8.mp4" class="list-video"></video>
+                <h3 class="list-title">knight chasing virus animation</h3>
+            </div>
+
+            <div class="list">
+                <video src="video/vid-9.mp4" class="list-video"></video>
+                <h3 class="list-title">3D helicopter animation</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- custom js file link  -->
+    <script >
+        let videoList = document.querySelectorAll('.video-list-container .list');
+
+        videoList.forEach(vid => {
+            vid.onclick = () => {
+                videoList.forEach(remove => { remove.classList.remove('active') });
+                vid.classList.add('active');
+                let src = vid.querySelector('.list-video').src;
+                let title = vid.querySelector('.list-title').innerHTML;
+                document.querySelector('.main-video-container .main-video').src = src;
+                document.querySelector('.main-video-container .main-video').play();
+                document.querySelector('.main-video-container .main-vid-title').innerHTML = title;
+            };
+        });
+    </script>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

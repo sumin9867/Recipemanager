@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <title>Planner</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg  my-0 py-2 z-3">
+            <div class="container-fluid ">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success rounded-pill" type="submit">Search</button>
+                </form>
+                <a class="navbar-brand z-3 position-absolute top-0 start-50" href="index.html">
+                    <img src="logo.png" class=" border z-3 rounded-circle logo text-center"></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navigation-bar float-left" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 p-1 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Planner</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">My Recipes</a>
+                        </li>
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">Use Up Leftover</a>
+                        </li>
+
+                        <li class="nav-item px-1">
+                            <a class="nav-link" href="#">Videos</a>
+                        </li>
+                        <li class="nav-item px-1 pe-4">
+                            <button class="open-button" onclick="openForm()"><i
+                                    class="bi bi-person-circle"></i></button>
+
+
+                            <div class="form-popup" id="myForm">
+                                <form action="/action_page.php" class="form-container">
+                                    <div class="login-wrap">
+                                        <div class="login-html rounded-5 ">
+                                            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label
+                                                for="tab-1" class="tab">Sign In</label>
+                                            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2"
+                                                class="tab">Sign
+                                                Up</label>
+
+                                            <div class="login-form">
+
+                                                <div class="sign-in-htm">
+                                                    <div class="group">
+                                                        <label for="user" class="label">Username</label>
+                                                        <input id="user" type="text" class="input">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Password</label>
+                                                        <input id="pass" type="password" class="input"
+                                                            data-type="password">
+                                                    </div>
+                                                    <div class="group">
+                                                        <input id="check" type="checkbox" class="check" checked>
+                                                        <label for="check"><span class="icon"></span> Keep me Signed
+                                                            in</label>
+                                                    </div>
+                                                    <div class="group">
+                                                        <input type="submit" class="button" value="Sign In">
+                                                    </div>
+                                                    <div class="hr"></div>
+                                                    <div class="foot-lnk">
+                                                        <a href="#forgot">Forgot Password?</a>
+                                                    </div>
+                                                </div>
+                                                <div class="sign-up-htm">
+                                                    <div class="group">
+                                                        <label for="user" class="label">Username</label>
+                                                        <input id="user" type="text" class="input">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Password</label>
+                                                        <input id="pass" type="password" class="input"
+                                                            data-type="password">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Repeat Password</label>
+                                                        <input id="pass" type="password" class="input"
+                                                            data-type="password">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Email Address</label>
+                                                        <input id="pass" type="text" class="input">
+                                                    </div>
+                                                    <div class="group">
+                                                        <input type="submit" class="button" value="Sign Up">
+                                                    </div>
+                                                    <div class="hr"></div>
+                                                    <div class="foot-lnk">
+                                                        <label for="tab-1">Already Member?</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <button type="button" class="btn cancel" onclick="closeForm()"><i
+                                            class="bi bi-x-circle z-5"></i></i></button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container z-1 position-absolute py-3 rounded-circle  translate-middles  home-design bg-white">
+
+    </div>
+    <div class="container">
+        <h1 class="d-flex justify-content-cneter align-item-center">Comming Soon</h1>
+    </div>
+    
+</body>
+</html>

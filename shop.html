@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- ===== Fontawesome CDN Link ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid px-0 py-0 ">
+
+        <nav class="navbar navbar-expand-lg  my-0 py-0 z-3 bg-pink">
+
+            <div class="container-fluid px-0 ps-1 ">
+                <form class="d-flex" role="search">
+                    <button class="btn  border-0  mx-0" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                    <input class="form-control mx-0 px-0 py-0 border-0 bg-transparent" type="search"
+                        placeholder="Search" aria-label="Search">
+
+                </form>
+                <a class="navbar-brand py-0" href="index.html">
+                    <div class="" class=" border z-3 rounded-circle logo text-center py-0 bolder">
+                        <small><small>COOK,EAT,REPEAT</small></small>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navigation-bar float-left" id="navbarSupportedContent">
+                    <ul class="navbar-nav py-0  mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="planner.html"><i
+                                    class="fal fa-brands fa-tiktok"></i></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="My Recipe.html"><i class="fal fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"><i class="fal fa-brands fa-youtube"></i></a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"><i class="fal fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li class="nav-item  ">
+                            <button class="open-button bg-transparent border-0" onclick="openForm()"><small>SIGN
+                                    IN</small>
+                            </button>
+                            <div class="form-popup " id="myForm">
+                                <form action="/action_page.php" class="form-container">
+                                    <div class="login-wrap opacity-100 rounded-5">
+                                        <div class="login-html rounded-5 ">
+                                            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label
+                                                for="tab-1" class="tab">Sign In</label>
+                                            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2"
+                                                class="tab">Sign
+                                                Up</label>
+
+                                            <div class="login-form">
+
+                                                <div class="sign-in-htm">
+                                                    <div class="group">
+                                                        <label for="user" class="label">Username</label>
+                                                        <input id="user" type="text" class="input">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Password</label>
+                                                        <input id="pass" type="password" class="input"
+                                                            data-type="password">
+                                                    </div>
+                                                    <div class="group">
+                                                        <input id="check" type="checkbox" class="check" checked>
+                                                        <label for="check"><span class="icon"></span> Keep me Signed
+                                                            in</label>
+                                                    </div>
+                                                    <div class="group">
+                                                        <input type="submit" class="button" value="Sign In">
+                                                    </div>
+                                                    <div class="hr"></div>
+                                                    <div class="foot-lnk text-white">
+                                                        <a href="#forgot" class="text-white
+                                                        ">Forgot Password?</a>
+                                                    </div>
+                                                </div>
+                                                <div class="sign-up-htm">
+                                                    <div class="group">
+                                                        <label for="user" class="label">Username</label>
+                                                        <input id="user" type="text" class="input">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Password</label>
+                                                        <input id="pass" type="password" class="input"
+                                                            data-type="password">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Repeat Password</label>
+                                                        <input id="pass" type="password" class="input"
+                                                            data-type="password">
+                                                    </div>
+                                                    <div class="group">
+                                                        <label for="pass" class="label">Email Address</label>
+                                                        <input id="pass" type="text" class="input">
+                                                    </div>
+                                                    <div class="group">
+                                                        <input type="submit" class="button" value="Sign Up">
+                                                    </div>
+                                                    <div class="hr"></div>
+                                                    <div class="foot-lnk">
+                                                        <label for="tab-1">Already Member?</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn cancel" onclick="closeForm()"><i
+                                            class="fa-solid fa-xmark"></i></button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg  my-0 py-2 ">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navigation-bar float-left" id="navbarSupportedContent">
+                <ul class="navbar-nav mt-2 pt-1 ">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark " href="planner.html"><small>PLANNER</small></a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link text-dark " href="My Recipe.html"><small>RECIPES</small></a>
+                    </li>
+                    <li class="nav-item px-1">
+
+                    </li>
+
+                    <li class="nav-item px-1">
+                        <a class="nav-link text-dark" href="video.html"><small>VIDEOS</small></a>
+                    </li>
+                    <li class="nav-item px-1 pe-4">
+
+                    </li>
+                </ul>
+                <a class="navbar-brand  position-absolute top-0 start-50 translate-middle-x " href="index.html">
+                    <img src="image/logo.png" class="  logo text-center"></a>
+
+                <ul class="navbar-nav mt-3 pt-1 position-absolute top-0 end-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark " href="planner.html"><small>SHOP</small></a>
+                    </li>
+                    <li class="nav-item px-3 ps-4">
+                        <a class="nav-link text-dark " href="index.php"><small>USE LEFTOVER</small></a>
+                    </li>
+                    <li class="nav-item px-1">
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link text-dark " href="#"><button type="button"
+                                class="btn btn-danger p-1 px-2">SUBSCRIBE</button></a>
+                    </li>
+                    <li class="nav-item px-1 pe-4">
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <hr class="container hr mt-5 mb-3 bg-dark">
+   
+	
+		
+
+</body>
+
+</html>

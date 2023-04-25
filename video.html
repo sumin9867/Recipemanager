@@ -1,0 +1,671 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="stylesheet1.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <!-- ===== Fontawesome CDN Link ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+
+  <title>Video</Video></title>
+
+</head>
+
+<body>
+  <div class="container-fluid px-0 py-0 ">
+
+    <nav class="navbar navbar-expand-lg  my-0 py-0 z-3 bg-pink">
+
+        <div class="container-fluid px-0 ps-1 ">
+          <a class="navbar-brand d-flex ms-4 " href="index.html">
+            <img src="image/logo.png" class="  logo text-center"></a>
+            <div class="header1">
+              <div class="header__search">
+                <form action="">
+                  <input type="text" placeholder="Search" class="rounded-start-pill px-3"/>
+                  <button class="rounded-end-pill"><i class="material-icons text-center rounded-endd-pill ">search</i></button>
+                </form>
+              </div>
+              </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navigation-bar float-left" id="navbarSupportedContent">
+                <ul class="navbar-nav py-0  mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="planner.html"><i
+                                class="fal fa-brands fa-tiktok"></i></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="My Recipe.html"><i class="fal fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#"><i class="fal fa-brands fa-youtube"></i></a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#"><i class="fal fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li class="nav-item  ">
+                        <button class="open-button bg-transparent border-0 pt-0" onclick="openForm()"><small>SIGN
+                                IN</small>
+                        </button>
+                        <div class="form-popup " id="myForm">
+                            <form action="/action_page.php" class="form-container">
+                                <div class="login-wrap opacity-100 rounded-5">
+                                    <div class="login-html rounded-5 ">
+                                        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label
+                                            for="tab-1" class="tab">Sign In</label>
+                                        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2"
+                                            class="tab">Sign
+                                            Up</label>
+
+                                        <div class="login-form">
+
+                                            <div class="sign-in-htm">
+                                                <div class="group">
+                                                    <label for="user" class="label">Username</label>
+                                                    <input id="user" type="text" class="input">
+                                                </div>
+                                                <div class="group">
+                                                    <label for="pass" class="label">Password</label>
+                                                    <input id="pass" type="password" class="input"
+                                                        data-type="password">
+                                                </div>
+                                                <div class="group">
+                                                    <input id="check" type="checkbox" class="check" checked>
+                                                    <label for="check"><span class="icon"></span> Keep me Signed
+                                                        in</label>
+                                                </div>
+                                                <div class="group">
+                                                    <input type="submit" class="button" value="Sign In">
+                                                </div>
+                                                <div class="hr"></div>
+                                                <div class="foot-lnk text-white">
+                                                    <a href="#forgot" class="text-white
+                                                    ">Forgot Password?</a>
+                                                </div>
+                                            </div>
+                                            <div class="sign-up-htm">
+                                                <div class="group">
+                                                    <label for="user" class="label">Username</label>
+                                                    <input id="user" type="text" class="input">
+                                                </div>
+                                                <div class="group">
+                                                    <label for="pass" class="label">Password</label>
+                                                    <input id="pass" type="password" class="input"
+                                                        data-type="password">
+                                                </div>
+                                                <div class="group">
+                                                    <label for="pass" class="label">Repeat Password</label>
+                                                    <input id="pass" type="password" class="input"
+                                                        data-type="password">
+                                                </div>
+                                                <div class="group">
+                                                    <label for="pass" class="label">Email Address</label>
+                                                    <input id="pass" type="text" class="input">
+                                                </div>
+                                                <div class="group">
+                                                    <input type="submit" class="button" value="Sign Up">
+                                                </div>
+                                                <div class="hr"></div>
+                                                <div class="foot-lnk">
+                                                    <label for="tab-1">Already Member?</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn cancel" onclick="closeForm()"><i
+                                        class="fa-solid fa-xmark"></i></button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+ 
+  <div class="mainBody ">
+    <div class="videos py-5">
+   
+      <div class="videos__container container">
+        <!-- Single Video starts -->
+        <div class="video">
+          <div class="video__thumbnail">
+            <a href="video-link.html">
+            <img src="image/chicken-biryani.jpg" alt="" /></a>
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img src="http://aninex.com/images/srvc/web_de_icon.png" alt="" />
+            </div>
+            <div class="title">
+              <h3>
+                Get Restaurant Style Hyderabadi Chicken Biryani at Home!
+              </h3>
+              <a href="">Chef Ranveer Brar</a>
+              <span>10M Views • 3 Months Ago</span>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/YpTmcCBBdTE/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img src="http://aninex.com/images/srvc/web_de_icon.png" alt="" />
+            </div>
+            <div class="title">
+              <h3>Build A Password Generator with React JS - Beginners Tutorial</h3>
+              <a href="">FutureCoders</a>
+              <span>10M Views • 3 Months Ago</span>
+            </div>
+          </div>
+        </div>
+        <!-- Single Video Ends -->
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/46cXFUzR9XM/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnh53ZRIGnyzC28QrfuggCINb3cfNbNWo4Uc6qR9=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>Bella Ciao Full Song | La Casa De Papel | Money Heist | Netflix India</h3>
+              <a href="">Netflix</a>
+              <span>10M Views • 11 Months Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/d2na6sCyM5Q/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnhESPVEatju_1yE-03-KLeSrnSLc5yy0RcvhPd5Lg=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>DON'T EVER GIVE UP - Elon Musk (Motivational Video)</h3>
+              <a href=""> Chispa Motivation</a>
+              <span>10M Views • 1 Month Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/2Ji-clqUYnA/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwniaHN7MZyFEiNvdHuKMzIWnDF604Z2--O4GCMq-FA=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>Javascript Fundamentals</h3>
+              <a href="">Coding Addict</a>
+              <span>179K • 8 Months Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/3PHXvlpOkf4/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>Build 15 JavaScript Projects - Vanilla JavaScript Course</h3>
+              <a href=""> freeCodeCamp.org </a>
+              <span>470K Views • 8 Months Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/CVClHLwv-4I/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnhIz_0Su6HhW6Ym50QCroJCAnF10X9xnnMDboN2=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>Build Real Time Face Detection With JavaScript</h3>
+              <a href=""> Web Dev Simplified </a>
+              <span>875K Views • 1 Year Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/ulprqHHWlng/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>AWS Basics for Beginners - Full Course</h3>
+              <a href=""> freeCodeCamp.org </a>
+              <span>36K Views • 1 Day Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img src="http://aninex.com/images/srvc/web_de_icon.png" alt="" />
+            </div>
+            <div class="title">
+              <h3>
+                Top 5 Programming Languages to Learn in 2021 | Best Programming Languages to Learn
+              </h3>
+              <a href="">FutureCoders</a>
+              <span>10M Views • 3 Months Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/YpTmcCBBdTE/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img src="http://aninex.com/images/srvc/web_de_icon.png" alt="" />
+            </div>
+            <div class="title">
+              <h3>Build A Password Generator with React JS - Beginners Tutorial</h3>
+              <a href="">FutureCoders</a>
+              <span>10M Views • 3 Months Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/46cXFUzR9XM/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnh53ZRIGnyzC28QrfuggCINb3cfNbNWo4Uc6qR9=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>Bella Ciao Full Song | La Casa De Papel | Money Heist | Netflix India</h3>
+              <a href="">Netflix</a>
+              <span>10M Views • 11 Months Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/d2na6sCyM5Q/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnhESPVEatju_1yE-03-KLeSrnSLc5yy0RcvhPd5Lg=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>DON'T EVER GIVE UP - Elon Musk (Motivational Video)</h3>
+              <a href=""> Chispa Motivation</a>
+              <span>10M Views • 1 Month Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/2Ji-clqUYnA/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwniaHN7MZyFEiNvdHuKMzIWnDF604Z2--O4GCMq-FA=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>Javascript Fundamentals</h3>
+              <a href="">Coding Addict</a>
+              <span>179K • 8 Months Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/3PHXvlpOkf4/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>Build 15 JavaScript Projects - Vanilla JavaScript Course</h3>
+              <a href=""> freeCodeCamp.org </a>
+              <span>470K Views • 8 Months Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/CVClHLwv-4I/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnhIz_0Su6HhW6Ym50QCroJCAnF10X9xnnMDboN2=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>Build Real Time Face Detection With JavaScript</h3>
+              <a href=""> Web Dev Simplified </a>
+              <span>875K Views • 1 Year Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/ulprqHHWlng/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>AWS Basics for Beginners - Full Course</h3>
+              <a href=""> freeCodeCamp.org </a>
+              <span>36K Views • 1 Day Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img src="http://aninex.com/images/srvc/web_de_icon.png" alt="" />
+            </div>
+            <div class="title">
+              <h3>
+                Top 5 Programming Languages to Learn in 2021 | Best Programming Languages to Learn
+              </h3>
+              <a href="">FutureCoders</a>
+              <span>10M Views • 3 Months Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/YpTmcCBBdTE/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img src="http://aninex.com/images/srvc/web_de_icon.png" alt="" />
+            </div>
+            <div class="title">
+              <h3>Build A Password Generator with React JS - Beginners Tutorial</h3>
+              <a href="">FutureCoders</a>
+              <span>10M Views • 3 Months Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/46cXFUzR9XM/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnh53ZRIGnyzC28QrfuggCINb3cfNbNWo4Uc6qR9=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>Bella Ciao Full Song | La Casa De Papel | Money Heist | Netflix India</h3>
+              <a href="">Netflix</a>
+              <span>10M Views • 11 Months Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/d2na6sCyM5Q/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnhESPVEatju_1yE-03-KLeSrnSLc5yy0RcvhPd5Lg=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>DON'T EVER GIVE UP - Elon Musk (Motivational Video)</h3>
+              <a href=""> Chispa Motivation</a>
+              <span>10M Views • 1 Month Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/2Ji-clqUYnA/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwniaHN7MZyFEiNvdHuKMzIWnDF604Z2--O4GCMq-FA=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>Javascript Fundamentals</h3>
+              <a href="">Coding Addict</a>
+              <span>179K • 8 Months Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/3PHXvlpOkf4/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>Build 15 JavaScript Projects - Vanilla JavaScript Course</h3>
+              <a href=""> freeCodeCamp.org </a>
+              <span>470K Views • 8 Months Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/CVClHLwv-4I/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnhIz_0Su6HhW6Ym50QCroJCAnF10X9xnnMDboN2=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>Build Real Time Face Detection With JavaScript</h3>
+              <a href=""> Web Dev Simplified </a>
+              <span>875K Views • 1 Year Ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="video">
+          <div class="video__thumbnail">
+            <img src="https://img.youtube.com/vi/ulprqHHWlng/maxresdefault.jpg" alt="" />
+          </div>
+          <div class="video__details">
+            <div class="author">
+              <img
+                src="https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s48-c-k-c0x00ffffff-no-rj"
+                alt="" />
+            </div>
+            <div class="title">
+              <h3>AWS Basics for Beginners - Full Course</h3>
+              <a href=""> freeCodeCamp.org </a>
+              <span>36K Views • 1 Day Ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="d-flex flex-row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul class="pe-5 ps-0">
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+            <li><a href="#">affiliate program</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul class="pe-5 ps-0">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">shipping</a></li>
+            <li><a href="#">returns</a></li>
+            <li><a href="#">order status</a></li>
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>online shop</h4>
+          <ul class="pe-5 ps-0">
+            <li><a href="#">watch</a></li>
+            <li><a href="#">bag</a></li>
+            <li><a href="#">shoes</a></li>
+            <li><a href="#">dress</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/054bf718da.js" crossorigin="anonymous"></script>
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+  </script>
+  <script>
+    const menu = document.querySelector('#menu');
+    console.log(menu);
+    const sidebar = document.querySelector('.sidebar');
+    console.log(sidebar);
+
+    menu.addEventListener('click', function () {
+      sidebar.classList.toggle('show-sidebar');
+    });
+  </script>
+</body>
+</html>
